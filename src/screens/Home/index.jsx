@@ -1,17 +1,13 @@
-import { NavigationContainer } from "@react-navigation/native";
-import { StatusBar } from "expo-status-bar";
+import { View, Text, TouchableOpacity } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
+import styles from './styles'
+import Title from '../../components/Title'
 
-import StackRoutes from "./stack.routes";
-import TabRoutes from "./tab.routes";
-import DrawerRoutes from "./drawer.routes";
-
-export default function Routes() {
+export default function Home() {
+  const navigation = useNavigation()
   return (
-    <NavigationContainer>
-      <StackRoutes />
-      {/* <TabRoutes /> */}
-      {/* <DrawerRoutes /> */}
-      <StatusBar style="auto" />
-    </NavigationContainer>
-  );
+    <View style={styles.container}>
+        <Title texto="Home" />
+    </View>
+  )
 }
